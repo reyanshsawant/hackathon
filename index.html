@@ -1,29 +1,36 @@
-<a href="#" onclick="changeFrameSource('nicholas.html')">Home</a>
-<a href="#" onclick="changeFrameSource('reyansh.html')">Planets Exploration</a>
-<a href="#" onclick="changeFrameSource('rishab.html')">History of Space Exploration</a>
-<a href="#" onclick="changeFrameSource('nikhil.html')">Data Visualization</a>
+<html>
+    <head>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /> <meta http-equiv="Pragma" content="no-cache" /> <meta http-equiv="Expires" content="0" />
+    </head>
+    
+    <body>
+        <a href="#" onclick="changeFrameSource('nicholas.html')">Home</a>
+        <a href="#" onclick="changeFrameSource('reyansh.html')">Planets Exploration</a>
+        <a href="#" onclick="changeFrameSource('rishab.html')">History of Space Exploration</a>
+        <a href="#" onclick="changeFrameSource('nikhil.html')">Data Visualization</a>
+        
+        <div>
+            <iframe id="frame"></iframe>
+        </div>
+    </body>
 
- 
-<div>
-    <iframe id="frame"></iframe>
-</div>
+    <script>
+        function changeFrameSource(url){
+            document.getElementById('frame').src = url;
+        }
+    </script>
 
-<script>
-    function changeFrameSource(url){
-        document.getElementById('frame').src = url;
-    }
-</script>
-
-<style>
-    body {
-        margin: 10px;
-    }
-    #frame {
-        width: 100%;
-        height: 90%;
-    }
-    a {
-        margin-right: 10px;
-    }
-
-</style>
+    <style>
+        body {
+            margin: 10px;
+        }
+        #frame {
+            width: 100%;
+            height: 90%;
+        }
+        a {
+            margin-right: 10px;
+        }
+        
+    </style>
+</html>
