@@ -67,7 +67,7 @@ hr {
 
 .hero-title {
   text-align: center;
-  color: orangered;
+  color: rgb(123, 68, 48);
   font-size: 8rem;
 }
 
@@ -88,15 +88,6 @@ hr {
 
 .publish-date {
   color: rgba(255, 255, 255, 0.5);
-}
-
-.social-icons {
-  display: grid;
-  font-size: 3rem;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  align-items: center;
 }
 
 .first-paragraph::first-letter {
