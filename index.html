@@ -10,12 +10,10 @@
         <a href="#" onclick="changeFrameSource('nikhil.html')">Data Visualization</a>
         <a href="#" onclick="changeFrameSource('index2.html')">Earth Orbit Animation</a>
         <a href="#" onclick="changeFrameSource('quiz.html')">Quiz</a>
-        <a href="#" onclick="changeFrameSource('sources.html')">Sources</a>
+        <a href="#" onclick="changeFrameSource('source.html')">Sources</a>
         
         
-        <div>
-            <iframe id="frame"></iframe>
-        </div>
+            <iframe id="frame" src="nicholas.html"></iframe>
     </body>
 
     <script>
@@ -27,14 +25,19 @@
     <style>
         body {
             margin: 10px;
-            
+            height: 100%;
+            background-color: black;
+            /* TODO: black background */
         }
         #frame {
             width: 100%;
-            height: 90%;
+            height: 92%;
+            max-height: 100%;
         }
         a {
             margin-right: 10px;
+            color: white;
+            /* TODO: change link colors (google how to change <a> link colors in css) */
         }
         
     </style>
