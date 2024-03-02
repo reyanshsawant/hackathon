@@ -1,162 +1,49 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <title>3D Solar System using HTML CSS and JavaScript</title>
-</head>
-
-    <!-- Further code here -->
-    <body class="opening hide-UI view-2D zoom-large data-close controls-close">
-        <div id="navbar">
-            <a id="toggle-data" href="#data"><i class="icon-data"></i>Data</a>
-            <h1>3D Solar System</h1>
-            <a id="toggle-controls" href="#controls"><i class="icon-controls"></i>Controls</a>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> S0l@r Sy$tEm</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    
+    <body background="http://www.pptbackgrounds.net/uploads/the-starry-sky-backgrounds-wallpapers.jpg">
+        
+        <img class ="body" id="sun" src="http://2.bp.blogspot.com/_FBjLq3xECA0/TFzcxhIZUoI/AAAAAAAAAHU/U8CGkSJJoGo/s1600/Sun_Renderd_ps.jpg">
+        
+        <div class ="body" id="mercury-orbit">
+            <img class ="body" id="mercury" src="http://www.wwu.edu/skywise/planets/mercury.jpg">
         </div>
-        <div id="data">
-            <a class="sun" title="sun" href="#sunspeed">Sun</a>
-            <a class="mercury" title="mercury" href="#mercuryspeed">Mercury</a>
-            <a class="venus" title="venus" href="#venusspeed">Venus</a>
-            <a class="earth active" title="earth" href="#earthspeed">Earth</a>
-            <a class="mars" title="mars" href="#marsspeed">Mars</a>
-            <a class="jupiter" title="jupiter" href="#jupiterspeed">Jupiter</a>
-            <a class="saturn" title="saturn" href="#saturnspeed">Saturn</a>
-            <a class="uranus" title="uranus" href="#uranusspeed">Uranus</a>
-            <a class="neptune" title="neptune" href="#neptunespeed">Neptune</a>
+        
+        <div class ="body" id="venus-orbit">
+            <img class ="body" id="venus" src="http://photojournal.jpl.nasa.gov/jpegMod/PIA00104_modest.jpg">
         </div>
-        <div id="controls">
-            <label class="set-view">
-                <input type="checkbox">
-            </label>
-            <label class="set-zoom">
-                <input type="checkbox">
-            </label>
-            <label>
-                <input type="radio" class="set-speed" name="scale" checked>
-                <span>Speed</span>
-            </label>
-            <label>
-                <input type="radio" class="set-size" name="scale">
-                <span>Size</span>
-            </label>
-            <label>
-                <input type="radio" class="set-distance" name="scale">
-                <span>Distance</span>
-            </label>
-        </div>
-        <div id="universe" class="scale-stretched">
-            <div id="galaxy">
-                <div id="solar-system" class="earth">
-                    <div id="mercury" class="orbit">
-                        <div class="pos">
-                            <div class="planet">
-                                <dl class="infos">
-                                    <dt>Mercury</dt>
-                                    <dd><span></span></dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="venus" class="orbit">
-                        <div class="pos">
-                            <div class="planet">
-                                <dl class="infos">
-                                    <dt>Venus</dt>
-                                    <dd><span></span></dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="earth" class="orbit">
-                        <div class="pos">
-                            <div class="orbit">
-                                <div class="pos">
-                                    <div class="moon"></div>
-                                </div>
-                            </div>
-                            <div class="planet">
-                                <dl class="infos">
-                                    <dt>Earth</dt>
-                                    <dd><span></span></dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="mars" class="orbit">
-                        <div class="pos">
-                            <div class="planet">
-                                <dl class="infos">
-                                    <dt>Mars</dt>
-                                    <dd><span></span></dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="jupiter" class="orbit">
-                        <div class="pos">
-                            <div class="planet">
-                                <dl class="infos">
-                                    <dt>Jupiter</dt>
-                                    <dd><span></span></dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="saturn" class="orbit">
-                        <div class="pos">
-                            <div class="planet">
-                                <div class="ring"></div>
-                                <dl class="infos">
-                                    <dt>Saturn</dt>
-                                    <dd><span></span></dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="uranus" class="orbit">
-                        <div class="pos">
-                            <div class="planet">
-                                <dl class="infos">
-                                    <dt>Uranus</dt>
-                                    <dd><span></span></dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="neptune" class="orbit">
-                        <div class="pos">
-                            <div class="planet">
-                                <dl class="infos">
-                                    <dt>Neptune</dt>
-                                    <dd><span></span></dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="sun">
-                        <dl class="infos">
-                            <dt>Sun</dt>
-                            <dd><span></span></dd>
-                        </dl>
-                    </div>
-                </div>
+        
+        <div class ="body" id="earth-orbit">        
+            <img class ="body" id="earth" src="http://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57723/globe_east_540.jpg">
+        
+            <div class ="body" id="moon-orbit">
+                <img class ="body" id="moon" src="http://apod.nasa.gov/apod/image/1103/lroc_wac_nearside.jpg">
             </div>
         </div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            if (typeof jQuery == 'undefined') {
-                document.write(unescape("%3Cscript src='js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
-            }
-        </script>
-        <script src="js/prefixfree.min.js"></script>
-        <script src="js/scripts.min.js"></script>
+        
+         <div class ="body" id="mars-orbit">
+            <img class ="body" id="mars" src="http://vedicartandscience.com/wp-content/uploads/2011/08/mars-planet1.jpg">
+        </div>
+        
+        <div class ="body" id="jupiter-orbit">
+            <img class ="body" id="jupiter" src="http://upload.wikimedia.org/wikipedia/commons/e/e1/Jupiter_(transparent).png">
+        </div>
+        
+        <div class ="body" id="saturn-orbit">
+            <img class ="body" id="saturn" src="http://vector-magz.com/wp-content/uploads/2013/09/saturn-clip-art1.png">
+        </div>
+        
+        <div class ="body" id="uranus-orbit">
+            <img class ="body" id="uranus" src="http://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg">
+        </div>
+        
+        <div class ="body" id="neptune-orbit">
+            <img class ="body" id="neptune" src="http://t-bag.org/Painting/TheMax/neptune.gif">
+        </div>
     
-        <script src="script.js"></script>
     </body>
 </html>
