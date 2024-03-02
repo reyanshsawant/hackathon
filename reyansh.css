@@ -67,7 +67,7 @@ hr {
 
 .hero-title {
   text-align: center;
-  color: rgb(0, 255, 76);
+  color: orangered;
   font-size: 8rem;
 }
 
@@ -89,6 +89,7 @@ hr {
 .publish-date {
   color: rgba(255, 255, 255, 0.5);
 }
+
 
 .first-paragraph::first-letter {
   font-size: 6rem;
@@ -129,7 +130,7 @@ hr {
 }
 
 .list-title, .list-subtitle {
-  color: #00beef;
+  color: #434b4d;
 }
 
 .image-wrapper {
