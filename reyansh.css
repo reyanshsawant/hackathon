@@ -97,13 +97,6 @@ hr {
   margin-right: 1rem;
 }
 
-.quote {
-  color: #0010ef;
-  font-size: 2.4rem;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-}
-
 .quote::before {
   content: '" ';
 }
@@ -129,7 +122,7 @@ hr {
 }
 
 .list-title, .list-subtitle {
-  color: #00beef;
+  color: rgb(24, 112, 72);
 }
 
 .image-wrapper {
