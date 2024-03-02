@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- NO CACHE!!! -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /> <meta http-equiv="Pragma" content="no-cache" /> <meta http-equiv="Expires" content="0" />
 
@@ -17,6 +17,144 @@
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
     <link rel="stylesheet" href="nicholas.css" />
+    <script>
+        $(document).ready(function() {
+  $("#quoteButton").click(getQuote);
+  $("#twitterButton").click(postTwitter);
+  getQuote();
+});
+
+function getQuote() {
+  quotes = addQuotes();
+  
+  var randomQuoteNumber = randomUpTo(quotes.length);
+  console.log("Random quote number: " + randomQuoteNumber);
+
+  $("#quoteBox").html('"' + quotes[randomQuoteNumber].quote + '"');
+  $("#infoBox").html('<i>' + quotes[randomQuoteNumber].info + '</i>');
+}
+
+function postTwitter() {
+  var quotebox = $("#quoteBox").html();
+  var link = 'https://twitter.com/intent/tweet?text=' + quotebox;
+  window.open(link, '_blank');
+}
+
+function randomUpTo(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function addQuotes() {
+  var quotes = [];
+
+  quotes.push({
+    quote: "I’m coming back in… and it’s the saddest moment of my life.",
+    info: "Ed White expresses his sorrow at the conclusion of the first American spacewalk during the Gemini 4 mission on 3 June 1965."
+  });
+
+  quotes.push({
+    quote: "I feel fine. How about you?",
+    info: "Yuri Gagarin shows how calm he was during the first manned space mission on 12 April 1961 in his response to ground control when asked how he was doing."
+  });
+
+  quotes.push({
+    quote: "I didn’t feel like a giant. I felt very, very small.",
+    info: "Neil Armstrong on looking back at the Earth from the Moon in July 1969."
+  });
+
+  quotes.push({
+    quote: "When I first looked back at the Earth, standing on the Moon, I cried.",
+    info: "Alan Shepard talking about his time on the lunar surface during the Apollo 14 mission in February 1971."
+  });
+
+  quotes.push({
+    quote: "There is perhaps no better a demonstration of the folly of human conceits than this distant image of our tiny world.",
+    info: "Carl Sagan in Time magazine, 9 January 1995, describing the Pale Blue Dot image of Earth (above), taken by the Voyager 1 spacecraft 6 billion kilometres away in 1990."
+  });
+
+  quotes.push({
+    quote: "The scenery was very beautiful. But I did not see The Great Wall [of China].",
+    info: "Yang Liwei, China’s first astronaut (taikonaut), speaking in October 2003 on his inability to see The Great Wall of China from space, which has often been said to be visible."
+  });
+
+  quotes.push({
+    quote: "From out there on the Moon, international politics look so petty. You want to grab a politician by the scruff of the neck and drag him a quarter of a million miles out and say, ‘Look at that, you son of a bitch.",
+    info: "Edgar Mitchel, Apollo 14 astronaut, speaking in People magazine on 8 April 1974."
+  });
+
+  quotes.push({
+    quote: "We have your satellite. If you want it back send 20 billion in Martian money. No funny business or you will never see it again.",
+    info: "A joke reportedly written on a wall in a hall at NASA’s Jet Propulsion Lab, California, after losing contact with the Mars Polar Lander in December 1999."
+  });
+
+  quotes.push({
+    quote: "Contact light.",
+    info: "The actual first words spoken from the surface of the Moon, by Buzz Aldrin on 20 July 1969 when Apollo 11 landed. Over six hours later, Neil Armstrong stepped onto the lunar surface and uttered the immortal line “That’s one small step for [a] man, one giant leap for mankind” (more on that later)."
+  });
+
+  quotes.push({
+    quote: "Anyone who sits on top of the largest hydrogen-oxygen fueled system in the world, knowing they’re going to light the bottom, and doesn’t get a little worried, does not fully understand the situation.",
+    info: "John Young, after being asked if he was nervous about making the first Space Shuttle flight in 1981."
+  });
+
+  quotes.push({
+    quote: "HERE MEN FROM THE PLANET EARTH FIRST SET FOOT UPON THE MOON JULY 1969, A.D. WE CAME IN PEACE FOR ALL MANKIND",
+    info: "The words on a plaque left on the Moon by Buzz Aldrin and Neil Armstrong."
+  });
+
+  quotes.push({
+    quote: "It’s a fixer-upper of a planet but we could make it work.",
+    info: "Elon Musk, CEO of SpaceX, speaking in May 2013 about the possibility of humans eventually settling on Mars."
+  });
+
+  quotes.push({
+    quote: "I say, this has really been drama of the highest order.",
+    info: "A scientist at Jodrell Bank in the UK speaking in typically understated British fashion as they tracked Apollo 11’s descent to the Moon."
+  });
+
+  quotes.push({
+    quote: "Mars has been flown by, orbited, smacked into, radar examined, and rocketed onto, as well as bounced upon, rolled over, shoveled, drilled into, baked and even blasted. Still to come: Mars being stepped on.",
+    info: "Buzz Aldrin, in his new book Mission to Mars: My Vision for Space Exploration (2013)."
+  });
+
+  quotes.push({
+    quote: "Failure is not an option.",
+    info: "This quote is often attributed to NASA Flight Director Gene Kranz during the Apollo 13 rescue mission in April 1970, but he never actually said it."
+  });
+
+  quotes.push({
+    quote: "It doesn’t sound like there was time for the word to be there. On the other hand, I didn’t intentionally make an inane statement… certainly the ‘a’ was intended, because that’s the only way the statement makes any sense.",
+    info: "Neil Armstrong in his 2006 official biography, First Man, on whether he said the ‘a’ or not in his famous quote from the lunar surface."
+  });
+
+  quotes.push({
+    quote: "That may have been ‘one small step’ for Neil, but it’s a heck of a big leap for me!",
+    info: "Bruce McCandless, speaking to All About Space in June 2012, on the subject of performing the furthest free-flying spacewalk in 1984."
+  });
+
+  quotes.push({
+    quote: "It means nothing to me. I have no opinion about it, and I don’t care.",
+    info: "Not everyone was interested in the first Moon landing. Famous artist Pablo Picasso, reacting to the successful Apollo 11 mission, was quoted as saying this in the New York Times in July 1969."
+  });
+
+  quotes.push({
+    quote: "Okay, Houston, we’ve had a problem here.",
+    info: "Apollo 13 command module pilot John Swigert’s transmission to mission control when one of the spacecraft’s oxygen tanks exploded on 13 April 1970."
+  });
+
+  quotes.push({
+    quote: "Go flight.",
+    info: "The words spoken by engineer Steve Bales when an erroneous computer error put the descent of Apollo 11 in jeopardy. His quick realisation in just a few seconds that the problem was no cause for alarm, and that the mission could continue, saw him receive the NASA Group Achievement Award on behalf of the mission operations team."
+  });
+
+  quotes.push({
+    quote: "The probability of success is difficult to estimate; but if we never search the chance of success is zero.",
+    info: "A quote from Giuseppe Cocconi and Philip Morrison’s paper ‘Searching for Interstellar Communications’ that was published in September 1959, one of the first formal rational arguments supporting the search for extraterrestrial intelligence."
+  });
+
+  return quotes;
+}
+    </script>
   </head>
   <body>
     <main>
@@ -177,14 +315,32 @@
           </ul>
         </article>
         <aside class="image-wrapper">
-          <img
+            <div class="container">
+              <div class="centered text-center">
+                <h1 class="text-primary">Random Space Quote Generator</h1>
+            
+                <div class="well">
+                  <p id="quoteBox"></p>
+                  <p id="infoBox"></p>
+                </div>
+            
+                <button type="button" id="quoteButton" class="btn btn-primary btn-lg">
+                  <span class="glyphicon glyphicon-plane"></span> Generate New Quote
+                </button>
+                <button type="button" id="twitterButton" class="btn btn-success btn-lg">
+                  <span class="glyphicon glyphicon-share"></span> Post to Twitter
+                </button>
+                
+              </div>
+            </div>
+          <!-- <img
             src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
             alt="image of the quote machine project"
             loading="lazy"
             class="image-1"
             width="600"
             height="400"
-          />
+          /> -->
           <img
             src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"
             alt="image of a calculator project"
