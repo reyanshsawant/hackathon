@@ -186,3 +186,8 @@ hr {
     font-size: 1.6rem;
   } 
 }
+
+.brief-history2 {
+  display: grid;
+  grid-column: 1/-1;
+}
