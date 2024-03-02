@@ -8,14 +8,18 @@ body {
     margin: 0 auto;
     position: relative;
     animation: rotate 15s infinite linear;
+    perspective: 800px;
+    transform-style: preserve-3d;
   }
   
   .sun {
+    position: absolute;
     width: 100px;
     height: 100px;
     margin: 0 auto;
     border-radius: 50%;
     background-color: yellow;
+    box-shadow: 0 0 20px yellow;
   }
   
   .planet {
@@ -27,65 +31,84 @@ body {
   
   .mercury {
     top: 20%;
-    left: 42%;
+    left: 50%;
+    transform-origin: 0 50%;
     background-color: #d3d3d3;
     animation: rotate 2s infinite linear;
   }
   
   .venus {
     top: 25%;
-    left: 35%;
+    left: 50%;
+    transform-origin: 0 50%;
     background-color: #e07a57;
     animation: rotate 4s infinite linear;
   }
   
   .earth {
     top: 30%;
-    left: 28%;
+    left: 50%;
+    transform-origin: 0 50%;
     background-color: #2e86c1;
     animation: rotate 6s infinite linear;
   }
   
   .mars {
     top: 35%;
-    left: 20%;
+    left: 50%;
+    transform-origin: 0 50%;
     background-color: #d35400;
     animation: rotate 8s infinite linear;
   }
   
   .jupiter {
     top: 40%;
-    left: 13%;
+    left: 50%;
+    transform-origin: 0 50%;
     background-color: #f8c471;
     animation: rotate 10s infinite linear;
   }
   
   .saturn {
     top: 45%;
-    left: 6%;
+    left: 50%;
+    transform-origin: 0 50%;
     background-color: #f1c40f;
     animation: rotate 12s infinite linear;
   }
   
   .uranus {
     top: 50%;
-    left: 6%;
+    left: 50%;
+    transform-origin: 0 50%;
     background-color: #5dade2;
     animation: rotate 14s infinite linear;
   }
   
   .neptune {
     top: 55%;
-    left: 6%;
+    left: 50%;
+    transform-origin: 0 50%;
     background-color: #7d3c98;
     animation: rotate 16s infinite linear;
   }
   
+  .axis {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 400px;
+    background-color: white;
+    transform-origin: 0 0;
+    animation: rotate 15s infinite linear;
+  }
+  
   @keyframes rotate {
     0% {
-      transform: rotate(0);
+      transform: rotateY(0);
     }
     100% {
-      transform: rotate(1turn);
+      transform: rotateY(1turn);
     }
   }
