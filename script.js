@@ -1,5 +1,5 @@
 $(window).load(function () {
-    // visit our website www.codebyrolex.com 
+
     var body = $("body"),
         universe = $("#universe"),
         solarsys = $("#solar-system");
