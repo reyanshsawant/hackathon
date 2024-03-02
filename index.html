@@ -1,0 +1,28 @@
+<a href="#" onclick="changeFrameSource('nicholas.html')">Nicholas</a>
+<a href="#" onclick="changeFrameSource('reyansh.html')">Reyansh</a>
+<a href="#" onclick="changeFrameSource('rishab.html')">Rishab</a>
+
+ 
+<div>
+    <iframe id="frame"></iframe>
+</div>
+
+<script>
+    function changeFrameSource(url){
+        document.getElementById('frame').src = url;
+    }
+</script>
+
+<style>
+    body {
+        margin: 10px;
+    }
+    #frame {
+        width: 100%;
+        height: 90%;
+    }
+    a {
+        margin-right: 10px;
+    }
+
+</style>
